@@ -11,3 +11,4 @@ C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\obj\Deb
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.dll
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.pdb
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.genruntimeconfig.cache
+C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\HTML\formulario.html
