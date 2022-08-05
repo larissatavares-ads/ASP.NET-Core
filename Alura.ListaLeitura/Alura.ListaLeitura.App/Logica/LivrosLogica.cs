@@ -13,7 +13,8 @@ using System.Threading.Tasks;
 namespace Alura.ListaLeitura.App.Logica
 {
     //Os métodos com as funcionalidades de exibição de livro foram movidos para esta classe
-    public class LivrosLogica
+    //Trocar LivrosLogica por LivrosController
+    public class LivrosController
     {
         public static string CarregaLista(IEnumerable<Livro> livros)
         {
@@ -25,7 +26,7 @@ namespace Alura.ListaLeitura.App.Logica
             }
             return conteudoArquivo.Replace("#NOVO-ITEM#", "");
         }
-        public static Task LivrosParaLer(HttpContext context)
+        public static Task ParaLer(HttpContext context)
         {
             // Este código vai ser executado quando a requisição chegar
 
@@ -41,7 +42,7 @@ namespace Alura.ListaLeitura.App.Logica
 
             return context.Response.WriteAsync(conteudoArquivo);
         }
-        public static Task LivrosLendo(HttpContext context)
+        public static Task Lendo(HttpContext context)
         {
             // Este código vai ser executado quando a requisição chegar
 
@@ -57,7 +58,7 @@ namespace Alura.ListaLeitura.App.Logica
 
             return context.Response.WriteAsync(conteudoArquivo);
         }
-        public static Task LivrosLidos(HttpContext context)
+        public static Task Lidos(HttpContext context)
         {
             // Este código vai ser executado quando a requisição chegar
 
@@ -73,12 +74,15 @@ namespace Alura.ListaLeitura.App.Logica
 
             return context.Response.WriteAsync(conteudoArquivo);
         }
-        public static Task ExibeDetalhes(HttpContext context)
+        public string Detalhes(int id)
         {
-            int id = Convert.ToInt32(context.GetRouteValue("id"));
             var repo = new LivroRepositorioCSV();
             var livro = repo.Todos.First(l => l.Id == id);
-            return context.Response.WriteAsync(livro.Detalhes());
+            return livro.Detalhes();
+        }
+        public string Teste()
+        {
+            return "Nova funcionalidade implementada!";
         }
     }
 }
