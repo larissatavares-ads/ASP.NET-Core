@@ -2,6 +2,7 @@
 using Alura.ListaLeitura.App.Negocio;
 using Alura.ListaLeitura.App.Repositorio;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
@@ -14,65 +15,38 @@ namespace Alura.ListaLeitura.App.Logica
 {
     //Os métodos com as funcionalidades de exibição de livro foram movidos para esta classe
     //Trocar LivrosLogica por LivrosController
-    public class LivrosController
+    public class LivrosController : Controller
     {
+        public IEnumerable<Livro> livros { get; set; }
         public static string CarregaLista(IEnumerable<Livro> livros)
         {
             var conteudoArquivo = HTMLUtils.CarregaArquivoHTML("lista");
-            foreach (var livro in livros)
-            {
-                conteudoArquivo = conteudoArquivo
-                    .Replace("#NOVO-ITEM#", $"<li>{livro.Titulo} - {livro.Autor}</li>#NOVO-ITEM#");
-            }
+            
             return conteudoArquivo.Replace("#NOVO-ITEM#", "");
         }
-        public static Task ParaLer(HttpContext context)
+        public IActionResult ParaLer()
         {
             // Este código vai ser executado quando a requisição chegar
 
             var _repo = new LivroRepositorioCSV();
-            var conteudoArquivo = HTMLUtils.CarregaArquivoHTML("para-ler");
-
-            foreach (var livro in _repo.ParaLer.Livros)
-            {
-                conteudoArquivo = conteudoArquivo
-                    .Replace("#NOVO-ITEM#", $"<li>{livro.Titulo} - {livro.Autor}</li>#NOVO-ITEM#");
-            }
-            conteudoArquivo = conteudoArquivo.Replace("#NOVO-ITEM#", "");
-
-            return context.Response.WriteAsync(conteudoArquivo);
+            ViewBag.Livros = _repo.ParaLer.Livros; 
+            return View("lista");
         }
-        public static Task Lendo(HttpContext context)
+        public IActionResult Lendo()
         {
             // Este código vai ser executado quando a requisição chegar
 
             var _repo = new LivroRepositorioCSV();
-            var conteudoArquivo = HTMLUtils.CarregaArquivoHTML("lendo");
-
-            foreach (var livro in _repo.Lendo.Livros)
-            {
-                conteudoArquivo = conteudoArquivo
-                    .Replace("#NOVO-ITEM#", $"<li>{livro.Titulo} - {livro.Autor}</li>#NOVO-ITEM#");
-            }
-            conteudoArquivo = conteudoArquivo.Replace("#NOVO-ITEM#", "");
-
-            return context.Response.WriteAsync(conteudoArquivo);
+            ViewBag.Livros = _repo.Lendo.Livros;
+            return View("lista");
         }
-        public static Task Lidos(HttpContext context)
+        public IActionResult Lidos()
         {
             // Este código vai ser executado quando a requisição chegar
 
             var _repo = new LivroRepositorioCSV();
-            var conteudoArquivo = HTMLUtils.CarregaArquivoHTML("lidos");
-
-            foreach (var livro in _repo.Lidos.Livros)
-            {
-                conteudoArquivo = conteudoArquivo
-                    .Replace("#NOVO-ITEM#", $"<li>{livro.Titulo} - {livro.Autor}</li>#NOVO-ITEM#");
-            }
-            conteudoArquivo = conteudoArquivo.Replace("#NOVO-ITEM#", "");
-
-            return context.Response.WriteAsync(conteudoArquivo);
+            ViewBag.Livros = _repo.Lidos.Livros;
+            return View("lista");
         }
         public string Detalhes(int id)
         {

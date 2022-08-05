@@ -1,3 +1,4 @@
+C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Views\Cadastro\formulario.cshtml
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.deps.json
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.runtimeconfig.json
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.runtimeconfig.dev.json
@@ -11,7 +12,4 @@ C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\obj\Deb
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.dll
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.pdb
 C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.genruntimeconfig.cache
-C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\HTML\formulario.html
-C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\HTML\para-ler.html
-C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\HTML\lendo.html
-C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\HTML\lidos.html
+C:\GitHub\Asp.NET Core - Alura\Alura.ListaLeitura\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Views\Livros\lista.cshtml
